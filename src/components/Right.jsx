@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import prof from '../assets/rightimg.jpg'
 import prof1 from '../assets/banner.webp'
 import prof2 from '../assets/tech.jpg'

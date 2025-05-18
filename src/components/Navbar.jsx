@@ -16,31 +16,55 @@ const Navbar = () => {
         <div className="hidden md:flex space-x-6">
           <Link 
           to="/"
+          className="relative hover:text-indigo-400 transition-colors duration-300
+             after:content-[''] after:absolute after:left-0 after:-bottom-1
+             after:h-[2px] after:w-0 after:bg-indigo-400
+             hover:after:w-full after:transition-all after:duration-500"
           >
             <a className="hover:text-indigo-400">Main Page</a>
           </Link>  
           <Link 
           to="/about"
+          className="relative hover:text-indigo-400 transition-colors duration-300
+             after:content-[''] after:absolute after:left-0 after:-bottom-1
+             after:h-[2px] after:w-0 after:bg-indigo-400
+             hover:after:w-full after:transition-all after:duration-500"
           >
             <a className="hover:text-indigo-400">About me</a>
           </Link>  
           <Link 
           to="/skills"
+          className="relative hover:text-indigo-400 transition-colors duration-300
+             after:content-[''] after:absolute after:left-0 after:-bottom-1
+             after:h-[2px] after:w-0 after:bg-indigo-400
+             hover:after:w-full after:transition-all after:duration-500"
           >
             <a className="hover:text-indigo-400">Skill Sets</a>
           </Link>  
            <Link 
           to="/apps"
+          className="relative hover:text-indigo-400 transition-colors duration-300
+             after:content-[''] after:absolute after:left-0 after:-bottom-1
+             after:h-[2px] after:w-0 after:bg-indigo-400
+             hover:after:w-full after:transition-all after:duration-500"
           >
             <a className="hover:text-indigo-400">Apps</a>
           </Link>  
            <Link 
           to="/resume"
+          className="relative hover:text-indigo-400 transition-colors duration-300
+             after:content-[''] after:absolute after:left-0 after:-bottom-1
+             after:h-[2px] after:w-0 after:bg-indigo-400
+             hover:after:w-full after:transition-all after:duration-500"
           >
             <a className="hover:text-indigo-400">Resume</a>
           </Link>  
            <Link 
           to="/education"
+          className="relative hover:text-indigo-400 transition-colors duration-300
+             after:content-[''] after:absolute after:left-0 after:-bottom-1
+             after:h-[2px] after:w-0 after:bg-indigo-400
+             hover:after:w-full after:transition-all after:duration-500"
           >
             <a className="hover:text-indigo-400">Education</a>
           </Link>  
@@ -55,10 +79,60 @@ const Navbar = () => {
       {/* Mobile menu */}
       {isOpen && (
         <div className="md:hidden mt-3 flex flex-col space-y-3 px-4">
-          <a href="#" className="hover:text-indigo-400">Home</a>
-          <a href="#" className="hover:text-indigo-400">About</a>
-          <a href="#" className="hover:text-indigo-400">Services</a>
-          <a href="#" className="hover:text-indigo-400">Contact</a>
+          <Link 
+          to="/"
+          className="relative hover:text-indigo-400 transition-colors duration-300
+             after:content-[''] after:absolute after:left-0 after:-bottom-1
+             after:h-[2px] after:w-0 after:bg-indigo-400
+             hover:after:w-full after:transition-all after:duration-500"
+          >
+            <a className="hover:text-indigo-400">Main Page</a>
+          </Link>  
+          <Link 
+          to="/about"
+          className="relative hover:text-indigo-400 transition-colors duration-300
+             after:content-[''] after:absolute after:left-0 after:-bottom-1
+             after:h-[2px] after:w-0 after:bg-indigo-400
+             hover:after:w-full after:transition-all after:duration-500"
+          >
+            <a className="hover:text-indigo-400">About me</a>
+          </Link>  
+          <Link 
+          to="/skills"
+          className="relative hover:text-indigo-400 transition-colors duration-300
+             after:content-[''] after:absolute after:left-0 after:-bottom-1
+             after:h-[2px] after:w-0 after:bg-indigo-400
+             hover:after:w-full after:transition-all after:duration-500"
+          >
+            <a className="hover:text-indigo-400">Skill Sets</a>
+          </Link>  
+           <Link 
+          to="/apps"
+          className="relative hover:text-indigo-400 transition-colors duration-300
+             after:content-[''] after:absolute after:left-0 after:-bottom-1
+             after:h-[2px] after:w-0 after:bg-indigo-400
+             hover:after:w-full after:transition-all after:duration-500"
+          >
+            <a className="hover:text-indigo-400">Apps</a>
+          </Link>  
+           <Link 
+          to="/resume"
+          className="relative hover:text-indigo-400 transition-colors duration-300
+             after:content-[''] after:absolute after:left-0 after:-bottom-1
+             after:h-[2px] after:w-0 after:bg-indigo-400
+             hover:after:w-full after:transition-all after:duration-500"
+          >
+            <a className="hover:text-indigo-400">Resume</a>
+          </Link>  
+           <Link 
+          to="/education"
+          className="relative hover:text-indigo-400 transition-colors duration-300
+             after:content-[''] after:absolute after:left-0 after:-bottom-1
+             after:h-[2px] after:w-0 after:bg-indigo-400
+             hover:after:w-full after:transition-all after:duration-500"
+          >
+            <a className="hover:text-indigo-400">Education</a>
+          </Link>  
         </div>
       )}
     </nav>

@@ -11,7 +11,7 @@ const stats = [
 
 
   { name: 'Years of Experience', value: '7+' },
-  { name: 'Expertise Languages', value: '5' },
+  { name: 'Expertise Languages', value: '7' },
   { name: 'Education', value: '2' },
   
 ]
@@ -58,6 +58,7 @@ export default function Header() {
             {links.map((link) => (
              <Link 
              to={link.href}
+             
              > 
                 <span key={link.name} className="p-2 hover:p-2 rounded-full hover:bg-violet-500 text-white transition-all duration-300">
                     {link.name} <span aria-hidden="true">&rarr;</span>
