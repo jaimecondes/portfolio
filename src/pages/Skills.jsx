@@ -1,82 +1,112 @@
 import Navbar from "../components/Navbar";
-import prof from '../assets/rightimg.jpg'
 import Footer from "../components/Footer";
-import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { FaReact, FaDocker, FaAws, FaDatabase, FaMobileAlt, FaBrain, FaTable } from "react-icons/fa";
+import { SiTensorflow, SiKubernetes, SiNginx, SiGithub, SiPython } from "react-icons/si";
 
-export default function Skills(){
-    const [visible, setVisible] = useState(false);
+export default function Skills() {
+  const skills = [
+    {
+      title: "Web Development/Languages",
+      icon: <FaReact className="text-sky-400" size={28} />,
+      items: [
+        "React.js. Next.js, Node.js, Express.js, graphQL",
+        "Tailwind CSS, Bootstrap",
+        "RUST, PHP Vanila, PHP Laravel, C, C#, .NET, C++, Python, Python Django",
+        "Fastify - API",
+        "Redis",
+  
+      ],
+    },
+    {
+      title: "Deployment",
+      icon: <FaDocker className="text-blue-500" size={28} />,
+      items: [
+        "GitHub + GitHub Actions",
+        "Docker",
+        "Linux Server",
+        "Kubernetes",
+        "AWS (EC2, Lambda, Route53, RDBMS, Load Balancers)",
+        "Nginx",
+      ],
+    },
+    {
+      title: "Mobile App Development",
+      icon: <FaMobileAlt className="text-green-400" size={28} />,
+      items: ["React Native (Expo)", "Android Studio", "Java"],
+    },
+    {
+      title: "AI Integration",
+      icon: <FaBrain className="text-purple-400" size={28} />,
+      items: [
+        "OpenAI, ChatGPT, Copilot",
+        "Machine Learning (PyTorch, TensorFlow/Keras, scikit-learn, Pandas, Matplotlib)",
+      ],
+    },
+    {
+      title: "Database Management",
+      icon: <FaDatabase className="text-yellow-400" size={28} />,
+      items: [
+        "Database Schema",
+        "MySQL, PostgreSQL, MongoDB",
+        "ETL (Extract Transfer Load)",
+        "SaaS: RDS, DynamoDB",
+      ],
+    },
+    ,
+    {
+      title: "CMS",
+      icon: <FaTable className="text-yellow-400" size={28} />,
+      items: [
+        "WordPress",
+        "Wix",
+        "Jumla",
+        "Shopify",
+      ],
+    },
+  ];
 
-  useEffect(() => {
-    const timer = setTimeout(() => setVisible(true), 100);
-    return () => clearTimeout(timer);
-  }, []);
-
- return(
+  return (
     <>
-    <Navbar />
-    <div className={`w-full flex flex-col md:flex-row  transition-all duration-1000 ease-out transform ${
-        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-      }`}>
-       <div className="w-full md:w-full mt-20 p-5 text-white bg-white/10 rounded-lg backdrop-blur mr-10">
-           <h1 className="text-5xl font-semibold tracking-tight text-white sm:text-4xl">These are my skills right now!</h1>    
-           <br/>  
-           <h1 className="text-5xl font-semibold tracking-tight text-white sm:text-2xl">🌟 Web Development</h1>    
-             
-             <br/> 
-             <ul className="list-disc ml-6 text-white">
-                    <li>React + Vite, Next.js</li>
-                    <li>Tailwind CSS, Bootstrap</li>
-                    <li>Nodejs + express</li>
-                    <li>Fastify - API</li>
-                    <li>PHP(Laravel),PHP vanilla </li>
-                    <li>Python Django </li>
-                    
-                </ul>
-            <br/> 
-            <h1 className="text-5xl font-semibold tracking-tight text-white sm:text-2xl">🌟 Deployment</h1>    
-             
-             <br/> 
-             <ul className="list-disc ml-6 text-white">
-                    <li>Github, github actions</li>
-                    <li>Docker</li>
-                    <li>Linux server</li>
-                    <li>Kubernetes</li>
-                    <li>AWS ec2, lamda, route53, load balancers, RDBMS</li>
-                    <li>Nginx</li>
-                </ul>    
-        </div>
-        <div className="w-full md:w-full mt-20 p-5 bg-white/10 rounded-lg backdrop-blur">
-           <h1 className="text-5xl font-semibold tracking-tight text-white sm:text-2xl mt-20">🌟 Mobile App Development</h1>    
-             
-             <br/> 
-             <ul className="list-disc ml-6 text-white">
-                    <li>React-native expo</li>
-                    <li>Android Studio</li>
-                    <li>Java</li>
-                </ul> 
+      <Navbar />
+      <div className="min-h-screen bg-[#0b1120] text-white px-6 py-16">
+        <div className="max-w-6xl mx-auto">
+          <motion.h1
+            className="text-4xl md:text-5xl font-bold mb-12 text-center"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            These are my skills right now!
+          </motion.h1>
 
-            <h1 className="text-5xl font-semibold tracking-tight text-white sm:text-2xl mt-10">🌟 AI Integration</h1>    
-             
-             <br/> 
-             <ul className="list-disc ml-6 text-white ">
-                    <li>OpenAI, Chatgpt, Copilot</li>
-                    <li>Machine learning: PyTorch, TensorFlow / Keras , scikit-learn, Pandas,matplotlib</li>
-                    
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {skills.map((skill, index) => (
+              <motion.div
+                key={index}
+                className="bg-white/10 backdrop-blur-lg p-6 rounded-2xl shadow-lg border border-gray-800 hover:shadow-xl hover:border-indigo-500 transition duration-300"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.2, duration: 0.6 }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  {skill.icon}
+                  <h2 className="text-xl font-semibold">{skill.title}</h2>
+                </div>
+                <ul className="space-y-2 text-gray-300 text-sm">
+                  {skill.items.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <span className="text-indigo-400">▹</span> {item}
+                    </li>
+                  ))}
                 </ul>
-
-              <h1 className="text-5xl font-semibold tracking-tight text-white sm:text-2xl mt-10">🌟 Database Management</h1>    
-             
-             <br/> 
-             <ul className="list-disc ml-6 text-white ">
-                    <li>Database schema</li>
-                    <li>MySQL, PosgreSQL, MongoDB</li>   
-                    <li>ETL(Extract Transfer Load)</li>   
-                    <li>Saas: RDS,DynamoDB</li>   
-                </ul>
-                  
+              </motion.div>
+            ))}
+          </div>
         </div>
-    </div>
-    <Footer />
+      </div>
+      <Footer />
     </>
- )
+  );
 }

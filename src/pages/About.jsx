@@ -21,19 +21,19 @@ export default function About(){
             <img src={prof} alt="" className="rounded-r-full"/>    
         </div>
         <div className="w-full md:w-full mt-20 p-5">
-           <h1 className="text-5xl font-semibold tracking-tight text-white sm:text-4xl">Hi, Wanna know about me?</h1>    
+           <h1 className="text-5xl font-semibold tracking-tight text-white sm:text-4xl">Hi, wanna know about me?</h1>    
             
-            <p className="tracking-tight text-white mt-10">I’m an aspiring software engineer who builds ERP systems for companies and small businesses. I specialize in creating web and mobile applications with React—from design and development through deployment and maintenance. 
-                My past projects have taught me a lot, and each lesson fuels my growth. <span className="text-5xl font-semibold tracking-tight text-white sm:text-4xl">"Learn from your mistakes"</span> This phrase guides my work. I welcome challenges, enjoy debugging, and thrive on solving complex problems. With 5 + years in software development, 
-                I’ve gained experience across every phase of the SDLC.
-                life cycle.<br/><br/>
-                <span className="text-5xl font-semibold tracking-tight text-white sm:text-4xl">My go-to techniques</span>
+            <p className="tracking-tight text-white mt-10">I’m an aspiring software engineer with 5+ years of experience building ERP systems for companies and small businesses.<span className="text-5xl font-semibold tracking-tight text-white sm:text-4xl">"Learn from your mistakes"</span> This phrase guides my work. I welcome challenges, enjoy debugging, and thrive on solving complex problems. With 5 + years in software development, 
+                I specialize in React for both web and mobile applications—covering the full cycle from design → development → deployment → maintenance.<br/><br/>
+                <span className="text-5xl font-semibold tracking-tight text-white sm:text-4xl">What drives me?</span>
+                <p>“Learn from your mistakes.” This phrase fuels my growth. Every project has taught me valuable lessons that sharpen my craft.</p>
+                <p>I thrive on solving complex problems, love debugging, and welcome challenges that push me beyond my comfort zone.</p>
                 <ul className="list-disc ml-6 text-white">
-                    <li>Never ignore a small bug—fix it early.</li>
-                    <li>Always test your work thoroughly.</li>
-                    <li>Don’t approve anything without proof.</li>
-                    <li>Base decisions on evidence, not hearsay.</li>
-                    <li>Embrace feedback; it helps you grow.</li>
+                    <li>Fix small bugs early—they become big later.</li>
+                    <li>Test thoroughly—never ship guesswork.</li>
+                    <li>Decisions need proof, not assumptions.</li>
+                    <li>Embrace feedback—it’s the fastest way to grow.</li>
+                    
                 </ul>
             </p>
         </div>
